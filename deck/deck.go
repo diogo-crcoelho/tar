@@ -57,7 +57,7 @@ func major(){
 
 
 func init(){
-	rand.Seed(time.Now().UnixNano())
+	rand.Seed(int64(time.Since(time.Date(1999, time.May, 24, 17, 00, 99, 228, time.Local)).Seconds()))
 	minor()
 	major()
 	Akumu = append(Major, Minor...)
